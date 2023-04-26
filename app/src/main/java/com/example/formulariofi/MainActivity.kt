@@ -11,6 +11,14 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var arrayCarreras : ArrayAdapter<CharSequence>
+
+    private var nombreIn = ""
+    private var apellidosIn = ""
+    private var fechaNacIn = 0
+    private var correoIn = ""
+    private var cuentaIn = ""
+    private var carreraIn = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -18,7 +26,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         setSpinner()
     }
 
-    fun setSpinner() {
+    private fun setSpinner() {
         arrayCarreras = ArrayAdapter.createFromResource(
             this, R.array.careers_array,
             android.R.layout.simple_spinner_item
@@ -28,12 +36,25 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     }
 
     fun newProfile(view: View) {
+        nombreIn = binding.inputNombre.text.toString()
+        apellidosIn = binding.inputApellidos.text.toString()
+        fechaNacIn = binding.inputFechaNacimiento.text.toString().toInt()
+        correoIn = binding.inputEmail.text.toString()
+        cuentaIn = binding.inputCuenta.text.toString()
+
+        //TODO: Check the constraints
+
+        val alumno =  Alumno(nombreIn, apellidosIn, fechaNacIn, correoIn, cuentaIn, carreraIn)
+
         val intent = Intent(this, form::class.java)
+        val bundle = Bundle()
+        bundle.putParcelable("Alumno", alumno)
+        intent.putExtras(bundle)
         startActivity(intent)
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, pos: Int, id: Long) {
-        TODO("Not yet implemented")
+        carreraIn = arrayCarreras.getItem(pos).toString()
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
