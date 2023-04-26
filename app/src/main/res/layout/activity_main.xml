@@ -22,8 +22,100 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.976"
-            app:srcCompat="@drawable/baseline_person_add_alt_1_24"
-            tools:visibility="visible" />
+            app:srcCompat="@drawable/baseline_forward_24"
+            tools:visibility="visible"
+            android:focusable="true"
+            android:contentDescription="@string/siguiente" />
+
+        <EditText
+            android:id="@+id/inputNombre"
+            android:layout_width="284dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="120dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/nombre"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/inputApellidos"
+            android:layout_width="284dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="60dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/apellidos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputNombre"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/inputFechaNacimiento"
+            android:layout_width="282dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="60dp"
+            android:ems="10"
+            android:inputType="date"
+            android:text="@string/fecha_de_nacimiento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputApellidos"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/inputEmail"
+            android:layout_width="277dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="60dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:text="@string/correo_electr_nico"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputFechaNacimiento"
+            android:autofillHints="" />
+
+        <Spinner
+            android:id="@+id/spinnerCarrera"
+            android:layout_width="224dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="56dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputCuenta" />
+
+        <EditText
+            android:id="@+id/inputCuenta"
+            android:layout_width="278dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="60dp"
+            android:ems="10"
+            android:inputType="number"
+            android:text="@string/n_mero_de_cuenta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputEmail"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/tvFormTitle"
+            android:layout_width="164dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="44dp"
+            android:text="@string/formulario"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
