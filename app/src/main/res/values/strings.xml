@@ -1,4 +1,31 @@
 <resources>
-    <string name="app_name">FormularioFI</string>
     <string name="splash">Splash</string>
+    <string name="form_title">Titulo</string>
+    <string name="app_name">Formulario FI</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="fecha_de_nacimiento">Fecha de nacimiento</string>
+    <string name="correo_electr_nico">Correo electrónico</string>
+    <string name="n_mero_de_cuenta">Número de cuenta</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="carreras">Carreras</string>
+    <string name="formulario">Formulario</string>
+    <string-array name="careers_array">
+        <item>None</item>
+        <item>Ingeniería Aeroespacial</item>
+        <item>Ingeniería Civil</item>
+        <item>Ingeniería Geomática</item>
+        <item>Ingeniería Ambiental</item>
+        <item>Ingenieria Geofísica</item>
+        <item>Ingenieria Geológica</item>
+        <item>Ingenieria Petrolera</item>
+        <item>Ingenieria de Minas y Metalurgia</item>
+        <item>Ingenieria en Computación</item>
+        <item>Ingenieria Eléctica Electrónica</item>
+        <item>Ingenieria en Telecomuniaciones</item>
+        <item>Ingenieria Mecánica</item>
+        <item>Ingenieria Industrial</item>
+        <item>Ingenieria Mecatrónica</item>
+        <item>Ingenieria en Sistemas Biomédicos</item>
+    </string-array>
 </resources>
