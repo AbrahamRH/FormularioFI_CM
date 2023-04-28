@@ -30,7 +30,7 @@ class form : AppCompatActivity() {
     private fun putContent(alumno : Alumno) {
         binding.tvNombreCompleto.text = getString(R.string.nombreCompleto, alumno.nombre, alumno.apellidos)
         binding.tvCarrera.text = alumno.carrera
-        binding.tvEdad.text = alumno.birthdate
+        binding.tvEdad.text = alumno.getYears().toString()
         binding.tvCorreo.text = alumno.correo
     }
 }

@@ -33,4 +33,5 @@
     <string name="campoCuenta">Check the account field</string>
     <string name="campoCarrera">Check the career field</string>
     <string name="nombreCompleto">%1$s %2$s</string>
+    <string name="campoFecha">Check your birthdate</string>
 </resources>

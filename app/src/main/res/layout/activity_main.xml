@@ -14,8 +14,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:visibility="visible"
+            android:contentDescription="@string/siguiente"
+            android:focusable="true"
             android:onClick="newProfile"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.954"
@@ -23,9 +25,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.976"
             app:srcCompat="@drawable/baseline_forward_24"
-            tools:visibility="visible"
-            android:focusable="true"
-            android:contentDescription="@string/siguiente" />
+            tools:visibility="visible" />
+
 
         <EditText
             android:id="@+id/inputNombre"
@@ -37,7 +38,7 @@
             android:inputType="textPersonName"
             android:labelFor="@id/labelNombre"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintHorizontal_bias="0.472"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,50 +46,45 @@
             android:id="@+id/inputApellidos"
             android:layout_width="284dp"
             android:layout_height="44dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="44dp"
             android:autofillHints=""
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintHorizontal_bias="0.472"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/inputNombre" />
 
-        <EditText
-            android:id="@+id/inputFechaNacimiento"
-            android:layout_width="282dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="60dp"
-            android:autofillHints=""
-            android:ems="10"
-            android:inputType="date"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
-            app:layout_constraintStart_toStartOf="parent"
-            android:labelFor="@id/labelFecha"
-            app:layout_constraintTop_toBottomOf="@+id/inputApellidos"
-            tools:ignore="LabelFor" />
+        <TextView
+            android:id="@+id/labelApellidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/apellidos"
+            app:layout_constraintBottom_toTopOf="@+id/inputApellidos"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
             android:id="@+id/inputEmail"
             android:layout_width="277dp"
             android:layout_height="47dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="216dp"
             android:autofillHints=""
             android:ems="10"
             android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.447"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/inputFechaNacimiento"
+            app:layout_constraintTop_toBottomOf="@+id/inputApellidos"
             tools:ignore="LabelFor" />
 
         <Spinner
             android:id="@+id/spinnerCarrera"
             android:layout_width="224dp"
             android:layout_height="46dp"
-            android:layout_marginStart="68dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="32dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/inputCuenta" />
 
@@ -96,12 +92,12 @@
             android:id="@+id/inputCuenta"
             android:layout_width="278dp"
             android:layout_height="43dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="44dp"
             android:autofillHints=""
             android:ems="10"
             android:inputType="number"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintHorizontal_bias="0.443"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/inputEmail"
             tools:ignore="LabelFor" />
@@ -110,9 +106,10 @@
             android:id="@+id/tvFormTitle"
             android:layout_width="164dp"
             android:layout_height="39dp"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="32dp"
             android:text="@string/formulario"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -120,25 +117,28 @@
             android:id="@+id/labelNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
+            android:layout_marginStart="60dp"
             android:text="@string/nombre"
             app:layout_constraintBottom_toTopOf="@+id/inputNombre"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/labelApellidos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
-            android:text="@string/apellidos"
-            app:layout_constraintBottom_toTopOf="@+id/inputApellidos"
-            app:layout_constraintStart_toStartOf="parent" />
+        <DatePicker
+            android:id="@+id/inputFechaNacimiento"
+            android:layout_width="277dp"
+            android:layout_height="153dp"
+            android:layout_marginTop="280dp"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.447"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/labelFecha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
+            android:layout_marginStart="60dp"
             android:text="@string/fecha_de_nacimiento"
             app:layout_constraintBottom_toTopOf="@+id/inputFechaNacimiento"
             app:layout_constraintStart_toStartOf="parent" />
@@ -147,7 +147,7 @@
             android:id="@+id/labelCorreo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="68dp"
+            android:layout_marginStart="60dp"
             android:text="@string/correo_electr_nico"
             app:layout_constraintBottom_toTopOf="@+id/inputEmail"
             app:layout_constraintStart_toStartOf="parent" />
@@ -156,10 +156,17 @@
             android:id="@+id/labelCuenta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
+            android:layout_marginStart="60dp"
             android:text="@string/n_mero_de_cuenta"
             app:layout_constraintBottom_toTopOf="@+id/inputCuenta"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="20dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

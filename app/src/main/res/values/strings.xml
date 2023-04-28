@@ -13,6 +13,7 @@
     <string name="completarFormulario">Por favor complete el formulario.</string>
     <string name="campoCuenta">Revisa el campo cuenta</string>
     <string name="campoCarrera">Especifica la carrera</string>
+    <string name="campoFecha">Revisa tu fecha de nacimiento</string>
     <string name="nombreCompleto">%1$s %2$s</string>
     <string-array name="careers_array">
         <item>None</item>
