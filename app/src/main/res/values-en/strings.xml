@@ -29,4 +29,8 @@
         <item>Mechatronic Engineering</item>
         <item>Biomedical Systems Engineering</item>
     </string-array>
+    <string name="completarFormulario">Please complete the form</string>
+    <string name="campoCuenta">Check the account field</string>
+    <string name="campoCarrera">Check the career field</string>
+    <string name="nombreCompleto">%1$s %2$s</string>
 </resources>
