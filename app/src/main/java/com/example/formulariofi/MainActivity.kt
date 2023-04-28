@@ -10,11 +10,11 @@ import com.example.formulariofi.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var arrayCarreras : ArrayAdapter<CharSequence>
+    private lateinit var arrayCarreras: ArrayAdapter<CharSequence>
 
     private var nombreIn = ""
     private var apellidosIn = ""
-    private var fechaNacIn = 0
+    private var fechaNacIn = ""
     private var correoIn = ""
     private var cuentaIn = ""
     private var carreraIn = ""
@@ -38,19 +38,33 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     fun newProfile(view: View) {
         nombreIn = binding.inputNombre.text.toString()
         apellidosIn = binding.inputApellidos.text.toString()
-        fechaNacIn = binding.inputFechaNacimiento.text.toString().toInt()
+        fechaNacIn = binding.inputFechaNacimiento.text.toString()
         correoIn = binding.inputEmail.text.toString()
         cuentaIn = binding.inputCuenta.text.toString()
 
-        //TODO: Check the constraints
-
-        val alumno =  Alumno(nombreIn, apellidosIn, fechaNacIn, correoIn, cuentaIn, carreraIn)
-
-        val intent = Intent(this, form::class.java)
-        val bundle = Bundle()
-        bundle.putParcelable("Alumno", alumno)
-        intent.putExtras(bundle)
-        startActivity(intent)
+        val alumno = Alumno(nombreIn, apellidosIn, fechaNacIn, correoIn, cuentaIn, carreraIn)
+        if (alumno.check()) {
+            val (isOk, errorMsg) = alumno.checkAttributes(resources);
+            if(isOk){
+                val intent = Intent(this, form::class.java)
+                val bundle = Bundle()
+                bundle.putParcelable("Alumno", alumno)
+                intent.putExtras(bundle)
+                startActivity(intent)
+            }else{
+                Toast.makeText(
+                    this,
+                    errorMsg,
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        } else {
+            Toast.makeText(
+                this,
+                getString(R.string.completarFormulario),
+                Toast.LENGTH_LONG
+            ).show()
+        }
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, pos: Int, id: Long) {
