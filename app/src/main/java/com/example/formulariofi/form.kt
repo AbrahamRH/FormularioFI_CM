@@ -1,5 +1,6 @@
 package com.example.formulariofi
 
+import android.annotation.SuppressLint
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,30 +19,18 @@ class form : AppCompatActivity() {
         setContentView(binding.root)
 
         val bundle = intent.extras
-
         if (bundle != null) {
             val alumno = bundle.getParcelable("Alumno", Alumno::class.java)
             if (alumno != null) {
-                Toast.makeText(
-                    this,
-                    " Los datos del alumno son: ${alumno.nombre} ${alumno.apellidos} ${alumno.carrera}",
-                    Toast.LENGTH_LONG
-                ).show()
-            } else {
-                Toast.makeText(
-                    this,
-                    "Alumno nulo",
-                    Toast.LENGTH_LONG
-                ).show()
+                putContent(alumno)
             }
-        } else {
-            Toast.makeText(
-                this,
-                "Bundle nulo",
-                Toast.LENGTH_LONG
-            ).show()
-
         }
+    }
 
+    private fun putContent(alumno : Alumno) {
+        binding.tvNombreCompleto.text = getString(R.string.nombreCompleto, alumno.nombre, alumno.apellidos)
+        binding.tvCarrera.text = alumno.carrera
+        binding.tvEdad.text = alumno.birthdate
+        binding.tvCorreo.text = alumno.correo
     }
 }
