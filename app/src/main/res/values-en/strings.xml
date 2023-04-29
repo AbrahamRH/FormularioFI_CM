@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="splash">Splash</string>
-    <string name="form_title">Form title</string>
+    <string name="form_title">Profile</string>
     <string name="app_name">Form</string>
     <string name="nombre">Name</string>
     <string name="apellidos">Last name</string>

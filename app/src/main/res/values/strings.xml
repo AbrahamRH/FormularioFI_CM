@@ -1,6 +1,6 @@
 <resources>
     <string name="splash">Splash</string>
-    <string name="form_title">Titulo</string>
+    <string name="form_title">Perfil</string>
     <string name="app_name">Formulario FI</string>
     <string name="nombre">Nombre</string>
     <string name="apellidos">Apellidos</string>
@@ -15,6 +15,7 @@
     <string name="campoCarrera">Especifica la carrera</string>
     <string name="campoFecha">Revisa tu fecha de nacimiento</string>
     <string name="nombreCompleto">%1$s %2$s</string>
+    <string name="imagen_carrera">imagen carrera</string>
     <string-array name="careers_array">
         <item>None</item>
         <item>Ingeniería Aeroespacial</item>

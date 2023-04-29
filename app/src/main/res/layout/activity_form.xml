@@ -7,54 +7,76 @@
     tools:context=".form">
 
     <TextView
+        android:id="@+id/signoZodiacal"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCorreo" />
+
+    <TextView
+        android:id="@+id/signoChino"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signoZodiacal" />
+
+    <TextView
         android:id="@+id/tvTituloPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/form_title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.091" />
 
     <TextView
         android:id="@+id/tvNombreCompleto"
-        android:layout_width="253dp"
+        android:layout_width="250dp"
         android:layout_height="30dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTituloPerfil" />
-
-    <TextView
-        android:id="@+id/tvEdad"
-        android:layout_width="262dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="56dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNombreCompleto" />
+        app:layout_constraintTop_toBottomOf="@+id/imgCarrera" />
 
     <TextView
         android:id="@+id/tvCorreo"
-        android:layout_width="261dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="64dp"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvEdad" />
 
     <TextView
-        android:id="@+id/tvCarrera"
-        android:layout_width="266dp"
+        android:id="@+id/tvEdad"
+        android:layout_width="250dp"
         android:layout_height="30dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreCompleto" />
+
+    <ImageView
+        android:id="@+id/imgCarrera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCorreo" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars"
+        android:contentDescription="@string/imagen_carrera" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,6 @@ package com.example.formulariofi
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.*
 import com.example.formulariofi.databinding.ActivityMainBinding
@@ -14,12 +13,13 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     private lateinit var binding: ActivityMainBinding
     private lateinit var arrayCarreras: ArrayAdapter<CharSequence>
 
+    private var imgId = 0
     private var nombreIn = ""
     private var apellidosIn = ""
     private var correoIn = ""
     private var cuentaIn = ""
     private var carreraIn = ""
-    private var fechaNacIn = Triple<Int,Int,Int>(0,0,0)
+    private var fechaNacIn = Triple(0,0,0)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         setSpinner()
         setDatePicker()
     }
-
     private fun setSpinner() {
         arrayCarreras = ArrayAdapter.createFromResource(
             this, R.array.careers_array,
@@ -49,23 +48,22 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             fechaNacIn = Triple(day, newMonth, year)
         }
     }
-
     fun newProfile(view: View) {
         nombreIn = binding.inputNombre.text.toString()
         apellidosIn = binding.inputApellidos.text.toString()
         correoIn = binding.inputEmail.text.toString()
         cuentaIn = binding.inputCuenta.text.toString()
 
-        Log.d("Bug: ",fechaNacIn.toString())
-
         val alumno = Alumno(nombreIn, apellidosIn, fechaNacIn, correoIn, cuentaIn, carreraIn)
         if (alumno.check()) {
-            val (isOk, errorMsg) = alumno.checkAttributes(resources);
+            val (isOk, errorMsg) = alumno.checkAttributes(resources)
             if (isOk) {
                 val intent = Intent(this, form::class.java)
                 val bundle = Bundle()
                 bundle.putParcelable("Alumno", alumno)
+                bundle.putInt("imgId", imgId)
                 intent.putExtras(bundle)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                 startActivity(intent)
             } else {
                 Toast.makeText(
@@ -85,6 +83,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, pos: Int, id: Long) {
         carreraIn = arrayCarreras.getItem(pos).toString()
+        imgId = pos
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
