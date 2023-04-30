@@ -3,7 +3,6 @@ package com.example.formulariofi
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import com.example.formulariofi.databinding.ActivityFormBinding
 
 class form : AppCompatActivity() {
@@ -35,12 +34,12 @@ class form : AppCompatActivity() {
     }
 
     private fun putContent(alumno : Alumno) {
-        Log.d("Debug", "imagen: $imgId Con id: ${arrayImgCarreras[imgId]}")
         binding.tvNombreCompleto.text = getString(R.string.nombreCompleto, alumno.nombre, alumno.apellidos)
         binding.imgCarrera.setImageResource(arrayImgCarreras[imgId])
-        binding.tvEdad.text = alumno.getYears().toString()
+        binding.tvEdad.text = resources.getQuantityString(R.plurals.yearsOld, alumno.getYears())
         binding.tvCorreo.text = alumno.correo
         binding.tvSignoZodiacal.text = getString(alumno.getSigno())
+        binding.tvSignoChino.text = getString(alumno.getHoroscopo())
     }
 
     private fun setArrayCarreras() : ArrayList<Int> {

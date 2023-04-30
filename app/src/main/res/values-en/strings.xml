@@ -29,9 +29,38 @@
         <item>Mechatronic Engineering</item>
         <item>Biomedical Systems Engineering</item>
     </string-array>
+    <plurals name="yearsOld">
+        <item  quantity="one">Age: %d year</item>
+        <item  quantity="other">Age: %d years</item>
+    </plurals>
     <string name="completarFormulario">Please complete the form</string>
     <string name="campoCuenta">Check the account field</string>
     <string name="campoCarrera">Check the career field</string>
     <string name="nombreCompleto">%1$s %2$s</string>
     <string name="campoFecha">Check your birthdate</string>
+    <string name="imagen_carrera">image career</string>
+    <string name="Acuario">Aquarius</string>
+    <string name="Capricornio">Capricorn</string>
+    <string name="Piscis">Pisces</string>
+    <string name="Aries">Aries</string>
+    <string name="Tauro">Taurus</string>
+    <string name="Geminis">Gemini</string>
+    <string name="Cancer">Cancer</string>
+    <string name="Leo">Leo</string>
+    <string name="Virgo">Virgo</string>
+    <string name="Libra">Libra</string>
+    <string name="Escorpio">Scorpio</string>
+    <string name="Sagitario">Sagittarius</string>
+    <string name="Mono">Monkey</string>
+    <string name="Pollo">Chicken</string>
+    <string name="Cerdo">Pork</string>
+    <string name="Perro">Dog</string>
+    <string name="Rata">Rat</string>
+    <string name="Buey">Ox</string>
+    <string name="Tigre">Tiger</string>
+    <string name="Conejo">Rabbit</string>
+    <string name="Dragon">Dragon</string>
+    <string name="Serpiente">Snake</string>
+    <string name="Caballo">Horse</string>
+    <string name="Oveja">Sheep</string>
 </resources>

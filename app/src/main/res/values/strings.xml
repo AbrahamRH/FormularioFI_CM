@@ -15,6 +15,10 @@
     <string name="campoCarrera">Especifica la carrera</string>
     <string name="campoFecha">Revisa tu fecha de nacimiento</string>
     <string name="nombreCompleto">%1$s %2$s</string>
+    <plurals name="yearsOld">
+        <item  quantity="one">Edad: %d año</item>
+        <item  quantity="other">Edad: %d años</item>
+    </plurals>
     <string name="imagen_carrera">imagen carrera</string>
     <string name="Acuario">Acuario</string>
     <string name="Capricornio">Capricornio</string>
@@ -28,6 +32,18 @@
     <string name="Libra">Libra</string>
     <string name="Escorpio">Escorpio</string>
     <string name="Sagitario">Sagitario</string>
+    <string name="Mono">Mono</string>
+    <string name="Pollo">Pollo</string>
+    <string name="Cerdo">Cerdo</string>
+    <string name="Perro">Perro</string>
+    <string name="Rata">Rata</string>
+    <string name="Buey">Buey</string>
+    <string name="Tigre">Tigre</string>
+    <string name="Conejo">Conejo</string>
+    <string name="Dragon">Dragon</string>
+    <string name="Serpiente">Serpiente</string>
+    <string name="Caballo">Caballo</string>
+    <string name="Oveja">Oveja</string>
     <string-array name="careers_array">
         <item>None</item>
         <item>Ingeniería Aeroespacial</item>

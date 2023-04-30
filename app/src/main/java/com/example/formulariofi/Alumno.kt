@@ -75,4 +75,21 @@ class Alumno(
             else -> 0
         }
     }
+
+    fun getHoroscopo() : Int {
+        return when(birthdate?.third) {
+            0 -> R.string.Mono
+            1 -> R.string.Pollo
+            2 -> R.string.Perro
+            3 -> R.string.Cerdo
+            4 -> R.string.Rata
+            5 -> R.string.Buey
+            6 -> R.string.Tigre
+            7 -> R.string.Conejo
+            8 -> R.string.Dragon
+            9 -> R.string.Serpiente
+            10 -> R.string.Caballo
+            else -> R.string.Oveja
+        }
+    }
 }
