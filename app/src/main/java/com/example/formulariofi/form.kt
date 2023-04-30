@@ -36,7 +36,7 @@ class form : AppCompatActivity() {
     private fun putContent(alumno : Alumno) {
         binding.tvNombreCompleto.text = getString(R.string.nombreCompleto, alumno.nombre, alumno.apellidos)
         binding.imgCarrera.setImageResource(arrayImgCarreras[imgId])
-        binding.tvEdad.text = resources.getQuantityString(R.plurals.yearsOld, alumno.getYears())
+        binding.tvEdad.text = resources.getQuantityString(R.plurals.yearsOld, alumno.getYears(), alumno.getYears())
         binding.tvCorreo.text = alumno.correo
         binding.tvSignoZodiacal.text = getString(alumno.getSigno())
         binding.tvSignoChino.text = getString(alumno.getHoroscopo())

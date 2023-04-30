@@ -10,6 +10,7 @@
     <string name="n_mero_de_cuenta">Account number</string>
     <string name="siguiente">Next</string>
     <string name="carreras">Careers</string>
+    <string name="carrera">Career</string>
     <string name="formulario">Form</string>
     <string-array name="careers_array">
         <item>None</item>
@@ -62,5 +63,4 @@
     <string name="Dragon">Dragon</string>
     <string name="Serpiente">Snake</string>
     <string name="Caballo">Horse</string>
-    <string name="Oveja">Sheep</string>
 </resources>

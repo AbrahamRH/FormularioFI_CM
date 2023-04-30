@@ -7,7 +7,17 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/bg_azul"
         tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/labelCarrera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:text="@string/carrera"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerCarrera"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnNewProfile"
@@ -30,28 +40,28 @@
 
         <EditText
             android:id="@+id/inputNombre"
-            android:layout_width="284dp"
-            android:layout_height="44dp"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
             android:layout_marginTop="120dp"
             android:autofillHints=""
             android:ems="10"
             android:inputType="textPersonName"
             android:labelFor="@id/labelNombre"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.472"
+            app:layout_constraintHorizontal_bias="0.458"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/inputApellidos"
-            android:layout_width="284dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="44dp"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
             android:autofillHints=""
             android:ems="10"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.472"
+            app:layout_constraintHorizontal_bias="0.458"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/inputNombre" />
 
@@ -67,8 +77,8 @@
 
         <EditText
             android:id="@+id/inputEmail"
-            android:layout_width="277dp"
-            android:layout_height="47dp"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
             android:layout_marginTop="216dp"
             android:autofillHints=""
             android:ems="10"
@@ -81,17 +91,17 @@
 
         <Spinner
             android:id="@+id/spinnerCarrera"
-            android:layout_width="224dp"
-            android:layout_height="46dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="32dp"
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="52dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/inputCuenta" />
 
         <EditText
             android:id="@+id/inputCuenta"
-            android:layout_width="278dp"
-            android:layout_height="43dp"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
             android:layout_marginTop="44dp"
             android:autofillHints=""
             android:ems="10"
@@ -106,7 +116,7 @@
             android:id="@+id/tvFormTitle"
             android:layout_width="164dp"
             android:layout_height="39dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="28dp"
             android:text="@string/formulario"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -124,8 +134,8 @@
 
         <DatePicker
             android:id="@+id/inputFechaNacimiento"
-            android:layout_width="277dp"
-            android:layout_height="153dp"
+            android:layout_width="280dp"
+            android:layout_height="145dp"
             android:layout_marginTop="280dp"
             android:calendarViewShown="false"
             android:datePickerMode="spinner"
