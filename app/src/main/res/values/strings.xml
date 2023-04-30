@@ -45,6 +45,8 @@
     <string name="Serpiente">Serpiente</string>
     <string name="Caballo">Caballo</string>
     <string name="Oveja">Oveja</string>
+    <string name="abraham_ram_rez_hern_ndez" translatable="false">Abraham Ramírez Hernández</string>
+    <string name="version_1">Versión 1.0</string>
     <string-array name="careers_array">
         <item>None</item>
         <item>Ingeniería Aeroespacial</item>

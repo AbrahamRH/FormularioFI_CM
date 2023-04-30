@@ -12,6 +12,7 @@
 
         <TextView
             android:id="@+id/labelCarrera"
+            android:fontFamily="@font/arvoregular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
@@ -68,6 +69,7 @@
         <TextView
             android:id="@+id/labelApellidos"
             android:layout_width="wrap_content"
+            android:fontFamily="@font/arvoregular"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:layout_marginBottom="4dp"
@@ -114,18 +116,21 @@
 
         <TextView
             android:id="@+id/tvFormTitle"
-            android:layout_width="164dp"
-            android:layout_height="39dp"
-            android:layout_marginTop="28dp"
+            android:layout_width="128dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/arvobold"
+            android:textSize="20sp"
             android:text="@string/formulario"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/labelNombre"
             android:layout_width="wrap_content"
+            android:fontFamily="@font/arvoregular"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:text="@string/nombre"
@@ -147,6 +152,7 @@
         <TextView
             android:id="@+id/labelFecha"
             android:layout_width="wrap_content"
+            android:fontFamily="@font/arvoregular"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:text="@string/fecha_de_nacimiento"
@@ -155,6 +161,7 @@
 
         <TextView
             android:id="@+id/labelCorreo"
+            android:fontFamily="@font/arvoregular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
@@ -164,6 +171,7 @@
 
         <TextView
             android:id="@+id/labelCuenta"
+            android:fontFamily="@font/arvoregular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"

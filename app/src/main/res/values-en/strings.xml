@@ -63,4 +63,6 @@
     <string name="Dragon">Dragon</string>
     <string name="Serpiente">Snake</string>
     <string name="Caballo">Horse</string>
+    <string name="Oveja">Sheep</string>
+    <string name="version_1">Version 1.0</string>
 </resources>
