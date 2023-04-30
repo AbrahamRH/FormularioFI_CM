@@ -16,6 +16,18 @@
     <string name="campoFecha">Revisa tu fecha de nacimiento</string>
     <string name="nombreCompleto">%1$s %2$s</string>
     <string name="imagen_carrera">imagen carrera</string>
+    <string name="Acuario">Acuario</string>
+    <string name="Capricornio">Capricornio</string>
+    <string name="Piscis">Piscis</string>
+    <string name="Aries">Aries</string>
+    <string name="Tauro">Tauro</string>
+    <string name="Geminis">Géminis</string>
+    <string name="Cancer">Cáncer</string>
+    <string name="Leo">Leo</string>
+    <string name="Virgo">Virgo</string>
+    <string name="Libra">Libra</string>
+    <string name="Escorpio">Escorpio</string>
+    <string name="Sagitario">Sagitario</string>
     <string-array name="careers_array">
         <item>None</item>
         <item>Ingeniería Aeroespacial</item>

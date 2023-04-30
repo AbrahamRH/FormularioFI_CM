@@ -3,6 +3,7 @@ package com.example.formulariofi
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.formulariofi.databinding.ActivityFormBinding
 
 class form : AppCompatActivity() {
@@ -23,22 +24,23 @@ class form : AppCompatActivity() {
             val alumno = if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU ){
                 bundle.getParcelable("Alumno", Alumno::class.java)
             } else {
-                bundle.getParcelable<Alumno>("Alumno")
+                bundle.getParcelable("Alumno")
             }
+            imgId = bundle.getInt("imgId")
+
             if (alumno != null) {
                 putContent(alumno)
             }
-
-            imgId = bundle.getInt("imgId")
-
         }
     }
 
     private fun putContent(alumno : Alumno) {
+        Log.d("Debug", "imagen: $imgId Con id: ${arrayImgCarreras[imgId]}")
         binding.tvNombreCompleto.text = getString(R.string.nombreCompleto, alumno.nombre, alumno.apellidos)
         binding.imgCarrera.setImageResource(arrayImgCarreras[imgId])
         binding.tvEdad.text = alumno.getYears().toString()
         binding.tvCorreo.text = alumno.correo
+        binding.tvSignoZodiacal.text = getString(alumno.getSigno())
     }
 
     private fun setArrayCarreras() : ArrayList<Int> {

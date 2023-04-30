@@ -40,7 +40,7 @@ class Alumno(
             msg = resources.getString(R.string.campoCarrera)
         }
 
-        if(getYears() <= 0){
+        if(getYears() < 0){
             ok = false
             msg = resources.getString(R.string.campoFecha)
 
@@ -52,5 +52,27 @@ class Alumno(
     fun getYears() : Int {
         val today = Calendar.getInstance()
         return today.get(Calendar.YEAR) - (birthdate?.third ?: 25000000 )
+    }
+
+    fun getSigno() : Int {
+        val month : Int? = birthdate?.second
+        var day : Int? = birthdate?.first
+        day = day ?: 0
+
+        return when(month) {
+            1 -> if (day >= 20) R.string.Acuario else R.string.Capricornio
+            2 -> if (day >= 19) R.string.Piscis else R.string.Acuario
+            3 -> if (day >= 21) R.string.Aries else R.string.Piscis
+            4 -> if (day >= 20) R.string.Tauro else R.string.Aries
+            5 -> if (day >= 21) R.string.Geminis else R.string.Tauro
+            6 -> if (day >= 21) R.string.Cancer else R.string.Geminis
+            7 -> if (day >= 23) R.string.Leo else R.string.Cancer
+            8 -> if (day >= 23) R.string.Virgo else R.string.Leo
+            9 -> if (day >= 23) R.string.Libra  else R.string.Virgo
+            10 -> if (day >= 23) R.string.Escorpio else R.string.Libra
+            11 -> if (day >= 22) R.string.Sagitario else R.string.Escorpio
+            12 -> if (day >= 22) R.string.Capricornio else R.string.Sagitario
+            else -> 0
+        }
     }
 }

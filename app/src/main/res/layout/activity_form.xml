@@ -7,7 +7,7 @@
     tools:context=".form">
 
     <TextView
-        android:id="@+id/signoZodiacal"
+        android:id="@+id/tvSignoZodiacal"
         android:layout_width="250dp"
         android:layout_height="30dp"
         android:layout_marginTop="60dp"
@@ -17,14 +17,14 @@
         app:layout_constraintTop_toBottomOf="@+id/tvCorreo" />
 
     <TextView
-        android:id="@+id/signoChino"
+        android:id="@+id/tvSignoChino"
         android:layout_width="250dp"
         android:layout_height="30dp"
         android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signoZodiacal" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSignoZodiacal" />
 
     <TextView
         android:id="@+id/tvTituloPerfil"
@@ -70,7 +70,7 @@
     <ImageView
         android:id="@+id/imgCarrera"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="250dp"
         android:layout_marginTop="120dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
